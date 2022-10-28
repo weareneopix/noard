@@ -1,0 +1,17 @@
+#text-notice {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	background: #fff;
+	z-index: 999999;
+}
+
+._noard-modified {
+	margin-left: 12px;
+	opacity: 0.8
+}
+
+._noard-modified > a > .notion-focusable > div:last-child {
+	display: none !important;
+}
