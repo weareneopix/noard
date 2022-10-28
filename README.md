@@ -1,10 +1,8 @@
 <p align="center">
-<img src="media/logo.png" width="72" alt="Logo as a board" />
-
-<h1>Noard</h1>
+<img src="media/logo.png" width="172" alt="Logo as a board" />
 </p>
+<h1 align="center">Noard</h1>
 
----
 
 [link-rgh]: https://github.com/sindresorhus/refined-github
 [link-ngh]: https://github.com/sindresorhus/notifier-for-github
