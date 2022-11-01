@@ -1,0 +1,27 @@
+{
+	"name": "Noard",
+	"version": "0.0.1",
+	"description": "Noard is a browser extension that helps folks in Neopix organize their Notion boards in a much cleaner and agile way.",
+	"homepage_url": "https://github.com/weareneopix/noard",
+	"manifest_version": 3,
+	"minimum_chrome_version": "105",
+	"icons": {
+		"128": "../../icon.png"
+	},
+	"permissions": [
+		"storage",
+        "tabs",
+		"activeTab"
+		
+	],
+	"host_permissions": [
+		"https://www.notion.so/weareneopix/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [ "https://www.notion.so/weareneopix/*" ],
+			"css": [ "../../content.css" ],
+			"run_at": "document_end"
+		}
+	]
+}

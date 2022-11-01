@@ -1,5 +1,5 @@
 node_modules
-distribution
+distribution*
 .parcel-cache
 
 ### macOS ###

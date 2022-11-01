@@ -1,13 +1,16 @@
 {
 	"private": true,
 	"scripts": {
-		"build": "parcel build source/manifest.json --no-content-hash --no-source-maps --dist-dir distribution --no-cache --detailed-report 0",
+		"build:v2": "parcel build source/manifest/v2/manifest.json --no-content-hash --no-source-maps --dist-dir distribution-v2 --no-cache --detailed-report 0",
+		"build:v3": "parcel build source/manifest/v3/manifest.json --no-content-hash --no-source-maps --dist-dir distribution-v3 --no-cache --detailed-report 0",
+		"build": "run-p build:*",
 		"lint": "run-p lint:*",
 		"lint-fix": "run-p 'lint:* -- --fix'",
 		"lint:css": "stylelint source/**/*.css",
 		"lint:js": "xo",
 		"test": "run-p lint:* build",
-		"watch": "parcel watch source/manifest.json --dist-dir distribution --no-cache --no-hmr"
+		"watch:v2": "parcel watch source/manifest/v2/manifest.json --dist-dir distribution-v2 --no-cache --no-hmr",
+		"watch:v3": "parcel watch source/manifest/v3/manifest.json --dist-dir distribution-v3 --no-cache --no-hmr"
 	},
 	"browserslist": [
 		"last 1 Chrome version",
@@ -42,8 +45,8 @@
 			]
 		}
 	},
- 	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
- 	"@parcel/bundler-default": {
- 		"minBundles": 10000000
- 	}
+	"@parcel/bundler-default-bug": "https://github.com/parcel-bundler/parcel/issues/8071",
+	"@parcel/bundler-default": {
+		"minBundles": 10000000
+	}
 }
